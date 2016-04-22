@@ -1,1 +1,6 @@
 main.exe
+.fake/
+.paket/
+fsharpcodecamp/obj/
+fsharpcodecamp/bin/
+packages/
