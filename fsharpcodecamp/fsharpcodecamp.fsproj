@@ -48,7 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="client.fs" />
-    <Compile Include="fsharpcodecamp.fs" />
+    <Compile Include="main.fs" />
     <None Include="App.config" />
   </ItemGroup>
   <PropertyGroup>

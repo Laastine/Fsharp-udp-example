@@ -4,3 +4,4 @@ main.exe
 fsharpcodecamp/obj/
 fsharpcodecamp/bin/
 packages/
+build/*
