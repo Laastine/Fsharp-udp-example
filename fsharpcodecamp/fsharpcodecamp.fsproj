@@ -50,6 +50,7 @@
     <Compile Include="client.fs" />
     <Compile Include="main.fs" />
     <None Include="App.config" />
+    <Reference Include="../packages/FSharp.Data/lib/net40/FSharp.Data.dll" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
