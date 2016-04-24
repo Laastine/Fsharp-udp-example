@@ -5,6 +5,8 @@ open System
 
 [<EntryPoint>]
 let main (argv :string[]) =
-  let client = Client()
-  client.connectToServer() |> ignore
+  [Client.messageLoop 3001]
+  |> Async.Parallel
+  |> Async.Ignore
+  |> Async.RunSynchronously
   0

@@ -47,14 +47,15 @@
     <Reference Include="System.Numerics" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="messages.fs" />
     <Compile Include="client.fs" />
     <Compile Include="main.fs" />
     <None Include="App.config" />
-    <Reference Include="../packages/FSharp.Data/lib/net40/FSharp.Data.dll" />
     <Reference Include="../packages/System.Json/lib/net40/System.Json.dll" />
     <Reference Include="../packages/ReadOnlyCollectionInterfaces/lib/NET40-client/ReadOnlyCollectionsInterfaces.dll" />
     <Reference Include="../packages/ReadOnlyCollectionExtensions/lib/NET40-client/ReadOnlyCollectionsExtensions.dll" />
     <Reference Include="../packages/Fleece/lib/NET40/Fleece.dll" />
+    <Compile Include="messages.fs" />
   </ItemGroup>
   <PropertyGroup>
     <MinimumVisualStudioVersion Condition="'$(MinimumVisualStudioVersion)' == ''">11</MinimumVisualStudioVersion>
