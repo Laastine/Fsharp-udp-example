@@ -1,19 +1,19 @@
 # Fsharp-udp-example
 
-Build and run
+### Environment setup (CLI-friendly)
+http://fsharp.org/guides/mac-linux-cross-platform/
+
+Mono cross platform .NET framework: `brew install mono`</br>
+F# Project Builder: `brew tap samritchie/forge && brew install forge`
+
+### Build and run
 ```
 ./build.sh
 mono build/fsharpudpexample.exe
 ```
 
-Dummy netcat UDP-listener: `nc -lu 127.0.0.1 3000`
+Dummy netcat UDP-listener: `nc -lu 127.0.0.1 3000`<br/>
 Send UDP message to client: `echo -n '{"type": "msg", "message": "Hello World"}' | nc -u 127.0.0.1 3000`
-
-### Environment setup
-http://fsharp.org/guides/mac-linux-cross-platform/
-
-Mono cross platform .NET framework: `brew install mono`</br>
-F# Project Builder: `brew tap samritchie/forge && brew install forge`
 
 ### Build tl;dr version
 - Fake (make for F#)
