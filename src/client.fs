@@ -5,7 +5,6 @@ open System.Net
 open System.Net.Sockets
 open System.Text
 open Fleece
-open Fleece.Operators
 open Messages
 
 let serverAddr = "127.0.0.1"
@@ -24,17 +23,16 @@ let messageLoop localPort = async {
   let inSocket = new UdpClient(clientEndPoint)
   outSocket.Connect(serverEndPoint)
 
-  let jsonMsg = {
+  let initMsg = Encoding.ASCII.GetBytes((toJSON {
                 Connect.Type = "connect"
                 Address = clientAddr
-              }
-  let initMsg = Encoding.ASCII.GetBytes((toJSON jsonMsg).ToString())
+              }).ToString())
 
   let! _ = outSocket.SendAsync(initMsg, initMsg.Length) |> Async.AwaitTask
   printf "out: %s\n" (Encoding.ASCII.GetString(initMsg))
   outSocket.Close()
 
-  let rec init(inSocket: UdpClient) = async {
+  let rec loop(inSocket: UdpClient) = async {
     let! msg = getServerMsg inSocket
     printf "in: %s\n" (Encoding.ASCII.GetString(msg))
     match msg with
@@ -43,7 +41,7 @@ let messageLoop localPort = async {
   }
 
   return! async {
-    try do! init inSocket
+    try do! loop inSocket
     finally inSocket.Close()
   }
 }
