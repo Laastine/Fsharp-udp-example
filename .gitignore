@@ -1,7 +1,6 @@
-main.exe
 .fake/
 .paket/
-fsharpcodecamp/obj/
-fsharpcodecamp/bin/
+src/obj/
+src/bin/
 packages/
 build/*
