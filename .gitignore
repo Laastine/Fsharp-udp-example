@@ -1,5 +1,4 @@
 .fake/
-.paket/
 src/obj/
 src/bin/
 packages/
