@@ -6,7 +6,8 @@ Build and run
 mono build/fsharpudpexample.exe
 ```
 
-Dummy netcat server: `nc -lu 127.0.0.1 3000`
+Dummy netcat UDP-listener: `nc -lu 127.0.0.1 3000`
+Send UDP message to client: `echo -n '{"type": "connect", "message": "Hello World"}' | nc -u 127.0.0.1 3000`
 
 ### Environment setup
 http://fsharp.org/guides/mac-linux-cross-platform/
