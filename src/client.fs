@@ -35,6 +35,12 @@ let messageLoop localPort = async {
   let rec loop(inSocket: UdpClient) = async {
     let! msg = getServerMsg inSocket
     printf "in: %s\n" (Encoding.ASCII.GetString(msg))
+    let parseResult: Response ParseResult = parseJSON (Encoding.ASCII.GetString(msg))
+    match parseResult with
+            | Choice2Of2 e -> printf "Failed parsing: %s\n" e
+            | Choice1Of2 r ->
+                printfn "%A" r.Msg
+                ()
     match msg with
       | ans ->
         return ()

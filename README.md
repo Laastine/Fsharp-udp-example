@@ -13,7 +13,7 @@ mono build/fsharpudpexample.exe
 ```
 
 Dummy netcat UDP-listener: `nc -lu 127.0.0.1 3000`<br/>
-Send UDP message to client: `echo -n '{"type": "msg", "message": "Hello World"}' | nc -u 127.0.0.1 3000`
+Send UDP message to client: `echo -n '{"type": "msg", "msg": "Hello World"}' | nc -u 127.0.0.1 3001`
 
 ### Build tl;dr version
 - Fake (make for F#)
