@@ -1,5 +1,68 @@
-.fake/
-src/obj/
-src/bin/
-packages/
-build/*
+**/node_modules/
+*.swp
+*.*~
+project.lock.json
+.DS_Store
+*.pyc
+*.zip
+
+# Visual Studio Code
+*.ionide
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+msbuild.log
+msbuild.err
+msbuild.wrn
+
+# Script produced files
+WebAPI/sqldumps/
+*.log
+
+# Build results
+*/[Dd]ebug/
+*/[Dd]ebugPublic/
+*/[Rr]elease/
+*/[Rr]eleases/
+*/x64/
+*/x86/
+*/build/
+*/bld/
+*/[Bb]in/
+*/[Oo]bj/
+*/msbuild.log
+*/msbuild.err
+*/msbuild.wrn
+
+# Build (src)
+*/*/*/[Dd]ebug/
+*/*/*/[Dd]ebugPublic/
+*/*/*/[Rr]elease/
+*/*/*/[Rr]eleases/
+*/*/*/x64/
+*/*/*/x86/
+*/*/*/build/
+*/*/*/bld/
+*/*/*/[Bb]in/
+*/*/*/[Oo]bj/
+*/*/*/msbuild.log
+*/*/*/msbuild.err
+*/*/*/msbuild.wrn
+
+# Secrets
+**/docker-env-secret
