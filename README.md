@@ -2,12 +2,15 @@
 
 ## Environment
 
-1. [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
+- Install [.NET Core 3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
 ## Build
 
 ```
-dotnet build
+pushd src/Server/ && dotnet build &&\
+popd &&\
+pushd src/Client/ && dotnet build &&\
+popd
 ```
 
 ## Run
