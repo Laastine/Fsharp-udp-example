@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Messages.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Fleece" Version="0.6.1" />
+  </ItemGroup>
+</Project>
